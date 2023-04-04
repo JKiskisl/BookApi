@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using System.Reflection.Metadata.Ecma335;
+using System.ComponentModel.DataAnnotations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -124,6 +125,9 @@ app.Run();
 public class Book
 {
     public int Id { get; set; }
+
     public required string Title { get; set; }
+
     public required string Author { get; set; }
+
 }

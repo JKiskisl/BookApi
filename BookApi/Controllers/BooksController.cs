@@ -42,6 +42,7 @@ namespace BookApi.Controllers
         [HttpPost]
         public async Task<ActionResult<IEnumerable<Book>>> PostBook(Book book)
         {
+
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
             return Ok(await _context.Books.ToListAsync());
